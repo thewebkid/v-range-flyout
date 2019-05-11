@@ -24,7 +24,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 
 ### Usage Examples
     
-    ```html
+```html
     <template>
       <div id="app">
         <div class="control">
@@ -71,7 +71,8 @@ A vue component that wraps a input type=number with a customizable range slider 
         padding:12px;
       }
     }
-    </style>```
+    </style>
+```
 
 ### Disclaimer
 This is in alpha. I have bugs. 
