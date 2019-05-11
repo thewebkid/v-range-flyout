@@ -1,4 +1,4 @@
-# v-range-flyout [![npm version](https://badge.fury.io/js/v-range-slider.svg)](https://badge.fury.io/js/v-range-slider)
+# v-range-flyout [![npm version](https://badge.fury.io/js/v-range-slider.svg)](https://badge.fury.io/js/v-range-slider) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A vue component that wraps a input type=number with a customizable range slider flyout.
 
 
@@ -24,6 +24,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 
 ### Usage Examples
     
+    ```html
     <template>
       <div id="app">
         <div class="control">
@@ -70,7 +71,7 @@ A vue component that wraps a input type=number with a customizable range slider 
         padding:12px;
       }
     }
-    </style>
+    </style>```
 
 ### Disclaimer
 This is in alpha. I have bugs. 
