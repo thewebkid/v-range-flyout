@@ -6,7 +6,7 @@ A vue component that wraps a input type=number with a customizable range slider 
     npm install --save v-range-flyout
 
 ### Initialize in main.js
-    import rangeFlyout from "v-range-flyout";`
+    import rangeFlyout from "v-range-flyout";
     Vue.use(rangeFlyout);`
     
 ### Options (element attributes)
