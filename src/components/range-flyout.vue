@@ -87,12 +87,13 @@ export default {
     selectValue(){
       const el = this.$refs.rangeInput;
       Vue.nextTick().then(()=>el.select());
+      this.$emit('change',this.curVal);
     },
     moved({pctY}){
       let y = pctY;
 
       this.precisionVal(this.range * y);
-      //this.selectValue();
+      this.selectValue();
     },
     complete({pctY}){
       this.pctY = pctY;
@@ -101,6 +102,7 @@ export default {
     change(){
       this.pctY = (this.curVal - this.min) / this.range;
       this.startY = Math.round(this.sldHeight * this.pctY);
+      this.$emit('change',this.curVal);
     },
     precisionVal(v1){
       let pw = Math.pow(10,getPrecision(this.incrSize));
@@ -108,15 +110,7 @@ export default {
       let i2 = this.incrSize * pw;
       let v = Math.round(v2 / i2) * i2;//nearest increment
       this.curVal = Math.min(this.max, this.min + (v / pw));
-      /*const iprec = getPrecision(this.incrSize);
 
-      let prec = Math.max(getPrecision(this.curVal),iprec);
-      //console.log({prec});
-      try {
-        this.curVal = prec > 0 ? Number(this.curVal.toPrecision(prec)) : Math.round(this.curVal);
-      }catch(ex){
-        console.log({prec})
-      }*/
     }
   },
   mounted(){

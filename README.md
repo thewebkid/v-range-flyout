@@ -3,7 +3,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 
 
 ## Installation
-`npm install --save v-range-flyout;`
+    npm install --save v-range-flyout
 
 ### Initialize in main.js
     import rangeFlyout from "v-range-flyout";`
@@ -19,6 +19,8 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **wrapperClass**: _String_ - Optional wrapper class for the component wrapper div
 - **flyoutClass**: _String_ - Optional wrapper class for the flyout wrapper div
 
+### Events
+- **@change**: Fires when value changes. Returns the numeric value.
 
 ### Usage Examples
     
