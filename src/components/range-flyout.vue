@@ -7,7 +7,7 @@
     <transition name="slide-fade">
       <div class="flyout" :class="flyoutClass" v-if="active">
         <label>{{min}}</label>
-        <div class="inner" :style="{height: sldHeight+'px'}">
+        <div class="inner" :style="{height: sldHeight+'px',background:slideBackground}">
           <movable :bounds="{x:[0,0],y:bounds}" :onmove="moved" :oncomplete="complete" :grid="gridSize" :pos-top="startY" />
         </div>
         <label>{{max}}</label>
@@ -77,15 +77,18 @@ export default {
     'min',
     'max',
     'sliderHeight',
+    'slideBackground',
     'val',
     'incr'
   ],
   methods:{
     blurred(e){
       this.active = false;
+      this.$emit('active', false);
     },
     focus(e){
       this.active = true;
+      this.$emit('active', true);
     },
     selectValue(){
       const el = this.$refs.rangeInput;
