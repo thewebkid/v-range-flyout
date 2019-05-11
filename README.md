@@ -1,13 +1,13 @@
-# v-range-flyout
+# v-range-flyout [![npm version](https://badge.fury.io/js/v-range-slider.svg)](https://badge.fury.io/js/v-range-slider)
 A vue component that wraps a input type=number with a customizable range slider flyout.
 
 
 ## Installation
-    npm install --save v-range-flyout
+    npm i --save v-range-flyout
 
 ### Initialize in main.js
     import rangeFlyout from "v-range-flyout";
-    Vue.use(rangeFlyout);`
+    Vue.use(rangeFlyout);
     
 ### Options (element attributes)
 - **val**: _Number_ - Required
