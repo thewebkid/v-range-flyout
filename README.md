@@ -73,4 +73,4 @@ A vue component that wraps a input type=number with a customizable range slider 
     </style>
 
 ### Disclaimer
-This is in alpha. I have bugs. For one, there is no event emitter yet :)
+This is in alpha. I have bugs. 
