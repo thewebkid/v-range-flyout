@@ -1,9 +1,10 @@
 {
   "name": "v-range-flyout",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Ron Gilchrist (thewebkid)",
   "private": false,
   "keywords": ["vue","vue-component","javascript","number-slider","range-slider"],
+  "license": "MIT",
   "scripts": {
     "build": "bili --name index --plugin vue --vue.css false"
   },
