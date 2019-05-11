@@ -18,6 +18,9 @@
 
 <script>
 import Vue from 'vue';
+import movable from 'v-movable';
+Vue.use(movable);
+
 const getPrecision = a => {
   let e = 1;
   while (Math.round(a * e) / e !== a) e *= 10;
@@ -67,16 +70,16 @@ export default {
     }
   },
   name: 'v-range-flyout',
-  props: {
-    inputClass:String,
-    wrapperClass:String,
-    flyoutClass:String,
-    min: Number,
-    max: Number,
-    sliderHeight:Number,
-    val: Number,
-    incr: Number
-  },
+  props: [
+    'inputClass',
+    'wrapperClass',
+    'flyoutClass',
+    'min',
+    'max',
+    'sliderHeight',
+    'val',
+    'incr'
+  ],
   methods:{
     blurred(e){
       this.active = false;
@@ -114,7 +117,7 @@ export default {
     }
   },
   mounted(){
-    this.curVal = this.val;
+    this.curVal = Number(this.val);
     this.change();
     console.log({grid:this.gridSize,incr:this.incrSize,range:this.range});
   }
