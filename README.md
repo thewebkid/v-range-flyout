@@ -52,16 +52,7 @@ A vue component that wraps a input type=number with a customizable range slider 
         </div>
       </div>
     </template>
-    
-    <script>
-    import rangeFlyout from './components/range-flyout.vue'
-    
-    export default {
-      name: 'app',
-      components: { rangeFlyout }
-    }
-    </script>
-    
+   
     <style lang="scss">
     #app {
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
