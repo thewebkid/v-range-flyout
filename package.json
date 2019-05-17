@@ -1,12 +1,13 @@
 {
   "name": "v-range-flyout",
-  "version": "1.0.0-beta.0",
+  "version": "0.2.2",
   "author": "Ron Gilchrist (thewebkid)",
   "private": false,
   "keywords": ["vue","vue-component","javascript","number-slider","range-slider"],
   "license": "MIT",
   "scripts": {
-    "build": "bili --name index --plugin vue --vue.css false"
+    "build": "bili --name index --plugin vue --vue.css false",
+    "serve": "vue-cli-service serve"
   },
   "main": "./dist/index.js",
   "files": [
@@ -17,11 +18,12 @@
     "url": "https://github.com/thewebkid/v-range-flyout.git"
   },
   "dependencies": {
+    "@vue/cli-service": "^3.7.0",
     "bili": "^4.7.4",
     "core-js": "^2.6.5",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
-    "v-movable": "^1.0.0-beta.0",
+    "v-movable": "0.2.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   }

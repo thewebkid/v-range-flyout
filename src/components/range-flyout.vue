@@ -150,11 +150,15 @@
 </script>
 
 <style lang="scss" scoped>
+  .range-flyout-wrapper{
+    position:relative;
+    display:inline-block;
+  }
   input[type=number]{
     display: inline-block;
     width: auto;
     height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
+    padding: .15rem .375rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -177,6 +181,7 @@
     opacity: 0;
   }
   .flyout{
+    top:0;
     position:absolute;
     margin-left:-4px;
     background:#f7f7f7;

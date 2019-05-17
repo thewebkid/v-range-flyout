@@ -1,5 +1,7 @@
 # v-range-flyout [![npm version](https://badge.fury.io/js/v-range-flyout.svg)](https://badge.fury.io/js/v-range-flyout) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-A vue component that wraps a input type=number with a customizable range slider flyout.
+![alt text](http://thewebkid.com/rangeflyout.png)
+
+A vue component that wraps a input type=number with a customizable range slider flyout with 2-way binding.
 
 
 ## Installation
@@ -60,13 +62,17 @@ A vue component that wraps a input type=number with a customizable range slider 
       -moz-osx-font-smoothing: grayscale;
       color: #2c3e50;
       margin-top: 60px;
-      .control{
-        display: inline-block;
-        padding:12px;
-      }
+      .control{          
+          display: inline-block;
+          padding:12px;
+          margin-right:50px;
+          label{
+            display:block;
+          }
+        }
     }
     </style>
 ```
 
 ### Disclaimer
-This is in alpha. I have bugs. 
+This is in active development. Stability not guaranteed. Please file github issues for bugs/features. 

@@ -37,12 +37,16 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //text-align: center;
+
   color: #2c3e50;
   margin-top: 60px;
   .control{
+    label{
+      display:block;
+    }
     display: inline-block;
     padding:12px;
+    margin-right:50px;
   }
 }
 </style>
