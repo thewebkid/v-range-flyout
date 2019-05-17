@@ -4539,10 +4539,10 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
-v-movable@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/v-movable/-/v-movable-0.1.1.tgz#d6b9ce0bf2ddafbfee88d2f7c0799dd0e8773055"
-  integrity sha512-F5coKkWp+jHCTOw29tTD6WYEgE8DFKOrbi+LLZwByqCmAT/0/eCK3EZ8G40hfWQA8OupUZxZByq+g4/2HWzkQA==
+v-movable@^1.0.0-beta.0:
+  version "1.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/v-movable/-/v-movable-1.0.0-beta.0.tgz#e4723658fde5df6e35d671de1bcd939f5b897787"
+  integrity sha512-aLJ4T7MK22OOFwjCczcD4i4nEV3Leb1SE7zEl/tAHAt0aYGIyh2KmX+ouwRx40s9Oqqsk9gLXCFn35ZOxsXmZA==
   dependencies:
     bili "^4.7.4"
     core-js "^2.6.5"

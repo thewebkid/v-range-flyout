@@ -1,6 +1,6 @@
 {
   "name": "v-range-flyout",
-  "version": "0.1.0",
+  "version": "1.0.0-beta.0",
   "author": "Ron Gilchrist (thewebkid)",
   "private": false,
   "keywords": ["vue","vue-component","javascript","number-slider","range-slider"],
@@ -21,7 +21,7 @@
     "core-js": "^2.6.5",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
-    "v-movable": "^0.1.1",
+    "v-movable": "^1.0.0-beta.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   }

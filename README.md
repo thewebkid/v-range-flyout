@@ -14,7 +14,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **min**: _Number_ - Required
 - **max**: _Number_ - Required
 - **sliderHeight**: _Number_ - Optionally set the height of the slideable area of the flyout.
-- **incr**: _Number_ - Optionally set value increment the control should snap to a multiple of.
+- **incr**: _Number_ - Optionally set value increment (step attribute in input[type=number]) the control should snap to a multiple of.
 - **slideBackground**: _String_ - used to show color scales as gradients. 
 - **inputClass**: _String_ - Optional css class to add to the input element
 - **wrapperClass**: _String_ - Optional wrapper class for the component wrapper div

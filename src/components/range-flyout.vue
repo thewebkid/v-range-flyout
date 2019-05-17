@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapperClass" class="range-flyout-wrapper">
     <input ref="rangeInput" type="number" :min="min" :max="max"
-           v-model="curVal" :class="inputClass"
+           v-model="curVal" :class="inputClass" :step="incrSize"
            @focus="focus" @blur="blurred" @change="change"
            @keyup.up="selectValue" @keyup.down="selectValue"/>
     <transition name="slide-fade">
