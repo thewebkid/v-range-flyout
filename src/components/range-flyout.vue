@@ -27,7 +27,6 @@
     return Math.log(e) / Math.LN10;
   };
   export default {
-    //components:{movable},
     data:()=>{
       return {
         active:false,
@@ -82,7 +81,8 @@
       'handleBg',
       'val',
       'incr',
-      'hideFlyout'
+      'hideFlyout',
+      'value'
     ],
     methods:{
       slideClick(e){
@@ -111,6 +111,7 @@
         const el = this.$refs.rangeInput;
         Vue.nextTick().then(()=>el.select());
         this.$emit('change',this.curVal);
+        this.$emit('input',this.curVal);
       },
       moved({pctY}){
         let y = 1 - pctY;
@@ -125,6 +126,7 @@
         this.pctY = 1-((this.curVal - this.min) / this.range);
         this.startY = Math.round(this.sldHeight * this.pctY);
         this.$emit('change',this.curVal);
+        this.$emit('input',this.curVal);
       },
       precisionVal(v1){
         let pw = Math.pow(10,getPrecision(this.incrSize));
@@ -134,8 +136,8 @@
         this.curVal = Math.min(this.max, this.min + (v / pw));
       },
       init(){
-        this.curVal = Number(this.val);
-        this.change();
+        let v = this.value === undefined ? this.val : this.value;
+        this.curVal = Number(v);
       }
     },
     mounted(){

@@ -13,7 +13,7 @@ A vue component that wraps a input type=number with a customizable range slider 
     Vue.use(rangeFlyout);
     
 ### Options (element attributes)
-- **val**: _Number_ - Required
+- **v-model** or **value** : _Number_ - Required. String values will be converted to Number.
 - **min**: _Number_ - Required
 - **max**: _Number_ - Required
 - **sliderHeight**: _Number_ - Optionally set the height of the slideable area of the flyout.
@@ -24,7 +24,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **flyoutClass**: _String_ - Optional wrapper class for the flyout wrapper div
 
 ### Events
-- **@change**: Fires when value changes. Returns the numeric value.
+- **@input** or **@change**: Fires when value changes. Returns the numeric value.
 - **@active**: Fires when flyout is toggled or input changes focus state. A boolean is passed to indicate "active" state. 
 
 
