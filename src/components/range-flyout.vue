@@ -122,9 +122,12 @@
         /*this.pctY = 1 - pctY;
         this.startY = this.sldHeight * this.pctY;*/
       },
-      change(){
+      change(noEmit){
         this.pctY = 1-((this.curVal - this.min) / this.range);
         this.startY = Math.round(this.sldHeight * this.pctY);
+        if (noEmit){
+          return;
+        }
         this.$emit('change',this.curVal);
         this.$emit('input',this.curVal);
       },
@@ -138,6 +141,7 @@
       init(){
         let v = this.value === undefined ? this.val : this.value;
         this.curVal = Number(v);
+        this.change(true);
       }
     },
     mounted(){

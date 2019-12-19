@@ -6,7 +6,7 @@
     </div>
     <div class="control">
       <label>0, 10 (sliderHeight:100)</label>
-      <range-flyout :min="0" :max="10" :val="2" :slider-height="100"/>
+      <range-flyout :min="0" :max="10" v-model="boundVal" :slider-height="100"/>
     </div>
     <div class="control">
       <label>0, 10 (sliderHeight:100, incr:.2)</label>
@@ -27,6 +27,11 @@
 import rangeFlyout from './components/range-flyout.vue'
 
 export default {
+  data:()=>{
+    return {
+      boundVal:2
+    }
+  },
   name: 'app',
   components: { rangeFlyout }
 }
