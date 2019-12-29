@@ -82,6 +82,7 @@
       'val',
       'incr',
       'hideFlyout',
+      'sticky',
       'value'
     ],
     methods:{
@@ -97,7 +98,7 @@
 
       },
       blurred(e){
-        if (this.noBlur) {
+        if (this.noBlur || this.sticky) {
           return;
         }
         this.active = false;
