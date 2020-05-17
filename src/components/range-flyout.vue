@@ -2,7 +2,7 @@
   <div :class="wrapperClass" class="range-flyout-wrapper">
     <input ref="rangeInput" type="number" :min="min" :max="max"
            v-model="curVal" :class="inputClass" :step="incrSize"
-           @focus="focus" @blur="blurred" @change="change"
+           @focus="focus" @blur="blurred" @change="change" @input="$emit('input', curVal)"
            @keyup.up="selectValue" @keyup.down="selectValue"/>
     <transition name="slide-fade">
       <div class="flyout" :class="flyoutClass" v-if="active && !hideFlyout">

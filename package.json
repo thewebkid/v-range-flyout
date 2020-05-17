@@ -1,6 +1,6 @@
 {
   "name": "v-range-flyout",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "author": "Ron Gilchrist (thewebkid)",
   "private": false,
   "keywords": [
@@ -24,7 +24,7 @@
     "url": "https://github.com/thewebkid/v-range-flyout.git"
   },
   "dependencies": {
-    "v-movable": "^0.3.0",
+    "v-movable": "0.2.11",
     "vue": "^2.6.11"
   },
   "devDependencies": {
