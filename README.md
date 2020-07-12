@@ -3,7 +3,7 @@
 
 A vue component that wraps a input type=number with a customizable range slider flyout.
 
-[Live Demo](http://preview.thewebkid.com/modules/v-range-flyout)
+[Live Demo](http://thewebkid.com/modules/v-range-flyout)
 
 ## Installation
     npm i --save v-range-flyout
@@ -20,7 +20,6 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **incr**: _Number_ - Optionally set value increment (step attribute in input[type=number]) the control should snap to a multiple of.
 - **slideBackground**: _String_ - used to show color scales as gradients.
 - **inputClass**: _String_ - Optional css class to add to the input element
-- **wrapperClass**: _String_ - Optional wrapper class for the component wrapper div
 - **flyoutClass**: _String_ - Optional wrapper class for the flyout wrapper div
 
 ### Events
@@ -34,9 +33,10 @@ A vue component that wraps a input type=number with a customizable range slider 
 <template>
   <div class="wrap">
     <div class="control">
-      <label>Choose a value between 0 and 100</label>
+      <label>Choose a value between -50 and 50</label>
       <range-flyout :min="-50" :max="50" v-model="chosenVal"/>
     </div>
+    <p>You chose: {{chosenVal}}</p>
   </div>
 </template>
 <script>

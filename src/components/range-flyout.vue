@@ -139,8 +139,10 @@
         let v = Math.round(v2 / i2) * i2;//nearest increment
         this.curVal = Math.min(this.max, this.min + (v / pw));
       },
-      init(){
-        let v = this.value === undefined ? this.val : this.value;
+      init(v){
+        if (!v) {
+          v = this.value === undefined ? this.val : this.value;
+        }
         this.curVal = Number(v);
         this.change(true);
       }
@@ -151,6 +153,9 @@
     watch:{
       val(){
         this.init();
+      },
+      value(v){
+        this.init(v);
       }
     }
   }

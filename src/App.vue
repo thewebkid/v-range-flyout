@@ -7,7 +7,6 @@
     <div class="control">
       <label>0, 10 (sliderHeight:100)</label>
       <range-flyout :min="0" :max="10" v-model="boundVal" :slider-height="100"/>
-
     </div>
     <div class="control">
       <label>0, 10 (sliderHeight:100, incr:.2)</label>
