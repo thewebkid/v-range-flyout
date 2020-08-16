@@ -16,6 +16,7 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **v-model** or **value** : _Number_ - Required. String values will be converted to Number.
 - **min**: _Number_ - Required
 - **max**: _Number_ - Required
+- **disabled**: _Boolean_ - Disable the control
 - **sliderHeight**: _Number_ - Optionally set the height of the slideable area of the flyout.
 - **incr**: _Number_ - Optionally set value increment (step attribute in input[type=number]) the control should snap to a multiple of.
 - **slideBackground**: _String_ - used to show color scales as gradients.
@@ -23,7 +24,8 @@ A vue component that wraps a input type=number with a customizable range slider 
 - **flyoutClass**: _String_ - Optional wrapper class for the flyout wrapper div
 
 ### Events
-- **@input** or **@change**: Fires when value changes. Returns the numeric value.
+- **@input**: Fires on keyboard or slider input
+- **@change**: Fires when value changes and control is no longer in focus. Returns the numeric value.
 - **@active**: Fires when flyout is toggled or input changes focus state. A boolean is passed to indicate "active" state.
 
 

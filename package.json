@@ -1,6 +1,6 @@
 {
   "name": "v-range-flyout",
-  "version": "1.0.10",
+  "version": "1.0.2",
   "author": "Ron Gilchrist (thewebkid)",
   "private": false,
   "keywords": [
@@ -24,17 +24,17 @@
     "url": "https://github.com/thewebkid/v-range-flyout.git"
   },
   "dependencies": {
-    "rollup-plugin-vue": "^5.1.7",
-    "v-movable": "^0.3.1",
+    "rollup-plugin-vue": "^5.1.9",
+    "v-movable": "^0.3.2",
     "vue": "^2.6.11",
     "vue-runtime-helpers": "^1.1.2"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.3.1",
-    "bili": "^4.10.0",
+    "@vue/cli-service": "^4.5.3",
+    "bili": "^4.10.1",
     "core-js": "^3.6.5",
-    "postcss": "^7.0.30",
-    "sass": "^1.26.5",
+    "postcss": "^7.0.32",
+    "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }

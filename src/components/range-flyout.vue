@@ -1,10 +1,10 @@
 <template>
   <div :class="wrapperClass" class="range-flyout-wrapper">
-    <input ref="rangeInput" type="number" :min="min" :max="max"
+    <input ref="rangeInput" type="number" :min="min" :max="max" :disabled="disabled" :readonly="disabled"
            v-model="curVal" :class="inputClass" :step="incrSize"
            @focus="focus" @blur="blurred" @change="change" @input="$emit('input', curVal)"
            @keyup.up="selectValue" @keyup.down="selectValue"/>
-    <transition name="slide-fade">
+    <transition name="slide-fade" v-if="!disabled">
       <div class="flyout" :class="flyoutClass" v-if="active && !hideFlyout">
         <label>{{max}}</label>
         <div class="inner" :style="{height: sldHeight+'px',background:slideBackground}" @mousedown="slideClick($event)">
@@ -83,7 +83,8 @@
       'incr',
       'hideFlyout',
       'sticky',
-      'value'
+      'value',
+      'disabled'
     ],
     methods:{
       slideClick(e){
