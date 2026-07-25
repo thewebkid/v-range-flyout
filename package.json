@@ -1,6 +1,6 @@
 {
   "name": "v-range-flyout",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Vue 3 component that wraps an input[type=number] with a customizable range slider flyout.",
   "author": "Ron Gilchrist (thewebkid)",
   "license": "MIT",
