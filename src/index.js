@@ -1,9 +1,11 @@
-import Vue from 'vue';
-import rangeFlyout from './components/range-flyout.vue';
-//import movable from 'v-movable';
+import RangeFlyout from './components/range-flyout.vue';
+
+export { RangeFlyout };
+export { RangeFlyout as VRangeFlyout };
+
 export default {
-  install(Vue) {
-   // Vue.use(movable);
-    Vue.component('range-flyout', rangeFlyout);
-  }
+  install(app) {
+    app.component('RangeFlyout', RangeFlyout);
+    app.component('VRangeFlyout', RangeFlyout);
+  },
 };
