@@ -36,6 +36,7 @@
     "type": "git",
     "url": "https://github.com/thewebkid/v-range-flyout.git"
   },
+  "homepage": "https://thewebkid.com/modules/v-range-flyout",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,11 +1,11 @@
 # v-range-flyout [![npm version](https://badge.fury.io/js/v-range-flyout.svg)](https://badge.fury.io/js/v-range-flyout) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Range Flyout](http://thewebkid.com/rangeflyout.png)
+![Range Flyout](https://thewebkid.com/range-flyout.png)
 
 A Vue 3 component that wraps an `input[type=number]` with a customizable range slider flyout.
 
 > **v2 is a Vue 3 rewrite.** For Vue 2, stay on `v-range-flyout@1.x`.
 
-[Live Demo](http://thewebkid.com/modules/v-range-flyout)
+[Live Demo](https://thewebkid.com/modules/v-range-flyout)
 
 ## Installation
 
