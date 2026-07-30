@@ -100,6 +100,7 @@ const rangeInput = ref(null);
 const movableEl = ref(null);
 let noBlur = false;
 let dragging = false;
+let selectTimer = null;
 
 const range = computed(() => props.max - props.min);
 
@@ -199,19 +200,32 @@ function init(v) {
 }
 
 function slideClick(e) {
-  if (e.target.classList.contains('inner')) {
-    const rect = trackEl.value.getBoundingClientRect();
-    const pctY = (e.clientY - rect.top) / sldHeight.value;
-    moved({ pctY });
-    // Snap the bar to the clicked position (moved() only updates the value).
-    handleY.value = Math.round(sldHeight.value * pctY);
-    nextTick(armMovable);
-  }
-  window.setTimeout(() => selectValue(), 333);
+  // Only handle direct track clicks — mousedown on the handle bubbles here too,
+  // and scheduling selectValue() for those would steal focus back ~333ms later
+  // if the user has already moved to another control.
+  if (!e.target.classList.contains('inner')) return;
+  const rect = trackEl.value.getBoundingClientRect();
+  const pctY = (e.clientY - rect.top) / sldHeight.value;
+  moved({ pctY });
+  // Snap the bar to the clicked position (moved() only updates the value).
+  handleY.value = Math.round(sldHeight.value * pctY);
+  nextTick(armMovable);
+  clearTimeout(selectTimer);
+  selectTimer = window.setTimeout(() => selectValue(), 333);
 }
 
 function selectValue() {
-  nextTick(() => rangeInput.value?.select());
+  clearTimeout(selectTimer);
+  selectTimer = null;
+  nextTick(() => {
+    // Only re-select if this control still owns the interaction. A deferred
+    // call after a track click must not yank focus from another input the
+    // user has already moved to.
+    if (!active.value) return;
+    const focused = document.activeElement;
+    if (focused && focused !== rangeInput.value && focused.tagName === 'INPUT') return;
+    rangeInput.value?.select();
+  });
   emitValue();
   emit('change', curVal.value);
 }
@@ -244,6 +258,8 @@ function onFlyoutMouseUp() {
 
 function blurred() {
   if (noBlur || props.sticky) return;
+  clearTimeout(selectTimer);
+  selectTimer = null;
   active.value = false;
   emit('active', false);
 }
